@@ -1,2 +1,3 @@
-# chatgpt-cli
+# ChatGPT CLI
+
 ChatGPT but in your terminal.
