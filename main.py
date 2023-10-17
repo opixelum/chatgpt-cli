@@ -18,6 +18,14 @@ def main():
 
     openai.api_key = os.environ.get("OPENAI_API_KEY")
 
+    print("Welcome to ChatGPT CLI! Type 'exit', 'quit' or 'bye' to quit.\n")
+
+    while True:
+        prompt = input("You: ")
+
+        if prompt.lower() in ["exit", "quit", "bye"]:
+            break
+
 
 if __name__ == '__main__':
     main()
