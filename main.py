@@ -1,7 +1,14 @@
 import openai
 import os
+import sys
 from os.path import join, dirname
 from dotenv import load_dotenv
+from colors import Colors
+
+
+def clear_line():
+    sys.stdout.write("\033[F")
+    sys.stdout.write("\033[K")
 
 
 def chat_with_gpt(prompt):
@@ -25,6 +32,11 @@ def main():
 
         if prompt.lower() in ["exit", "quit", "bye"]:
             break
+
+        print("\nThinking...")
+        response = chat_with_gpt(prompt)
+        clear_line()
+        print("\rChatGPT: " + Colors.BLUE + response + "\n" + Colors.RESET)
 
 
 if __name__ == '__main__':
