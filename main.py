@@ -1,7 +1,6 @@
 import openai
 import os
 import sys
-import time
 from os.path import join, dirname
 from dotenv import load_dotenv
 from colors import Colors
