@@ -36,7 +36,7 @@ def main():
         print("\nThinking...")
         response = chat_with_gpt(prompt)
         clear_line()
-        print("\rChatGPT: " + Colors.BLUE + response + "\n" + Colors.RESET)
+        print("\rChatGPT: " + Colors.CYAN + response + "\n" + Colors.RESET)
 
 
 if __name__ == '__main__':
