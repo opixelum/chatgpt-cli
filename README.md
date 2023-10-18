@@ -6,6 +6,9 @@ ChatGPT but in your terminal.
 
 ### Prerequisites
 
+**Remember that you need credits for OpenAI API in order to use this script.** 
+Check [OpenAI platform](https://platform.openai.com)
+
 1. Install `dotenv` & `openai` package:
 
    *Example using `pip`:*
