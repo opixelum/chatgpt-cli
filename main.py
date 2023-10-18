@@ -1,24 +1,16 @@
-import openai
 import os
+import chatgpt
 from os.path import join, dirname
 from dotenv import load_dotenv
 from colors import Colors
 from utils import clear_line
 
 
-def chat_with_gpt(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return response.choices[0].message.content.strip()
-
-
 def main():
     dotenv_path = join(dirname(__file__), '.env')
     load_dotenv(dotenv_path)
-
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
+    api_key = os.environ.get("OPENAI_API_KEY")
+    chatgpt.init(api_key)
 
     print("Welcome to ChatGPT CLI! Type 'exit', 'quit' or 'bye' to quit.\n")
 
@@ -29,7 +21,7 @@ def main():
             break
 
         print("\nThinking...")
-        response = chat_with_gpt(prompt)
+        response = chatgpt.chat(prompt)
         clear_line()
         print("\rChatGPT: " + Colors.CYAN + response + "\n" + Colors.RESET)
 
