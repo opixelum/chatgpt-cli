@@ -25,3 +25,11 @@ ChatGPT but in your terminal.
    ```text
     OPENAI_API_KEY=sk-...
     ```
+   
+### Usage
+
+Run it!
+
+ ```bash
+ python main.py
+ ```
