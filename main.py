@@ -1,40 +1,30 @@
-import openai
 import os
-import sys
-from os.path import join, dirname
-from dotenv import load_dotenv
+import chatgpt
 from colors import Colors
-
-
-def clear_line():
-    sys.stdout.write("\033[F")
-    sys.stdout.write("\033[K")
-
-
-def chat_with_gpt(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return response.choices[0].message.content.strip()
+from dotenv import load_dotenv
+from os.path import join, dirname
+from utils import clear_line
 
 
 def main():
+    # Load OpenAI API key from .env file
     dotenv_path = join(dirname(__file__), '.env')
     load_dotenv(dotenv_path)
+    api_key = os.environ.get("OPENAI_API_KEY")
+    chatgpt.init(api_key)
 
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
-
+    # Header and instructions
     print("Welcome to ChatGPT CLI! Type 'exit', 'quit' or 'bye' to quit.\n")
 
     while True:
+        # Get user input
         prompt = input("You: ")
-
         if prompt.lower() in ["exit", "quit", "bye"]:
             break
 
+        # Print response
         print("\nThinking...")
-        response = chat_with_gpt(prompt)
+        response = chatgpt.chat(prompt)
         clear_line()
         print("\rChatGPT: " + Colors.CYAN + response + "\n" + Colors.RESET)
 
