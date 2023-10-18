@@ -6,10 +6,24 @@ ChatGPT but in your terminal.
 
 ### Prerequisites
 
-**Remember that you need credits for OpenAI API in order to use this script.** 
+**Remember that you need credits for OpenAI API in order to use this script.**
 Check [OpenAI platform](https://platform.openai.com)
 
-1. Install `dotenv` & `openai` package:
+1. Clone this repo
+
+   *Using SSH:*
+
+   ```bash
+   git clone git@github.com:opixelum/chatgpt-cli.git
+   ```
+
+   *Using HTTPS:*
+
+   ```bash
+   git clone https://github.com/opixelum/chatgpt-cli.git
+   ```
+
+2. Install `dotenv` & `openai` package:
 
    *Example using `pip`:*
 
@@ -17,18 +31,18 @@ Check [OpenAI platform](https://platform.openai.com)
    pip install dotenv openai
    ```
 
-2. Copy `.env.example` into `.env`:
+3. Copy `.env.example` into `.env`:
 
     ```bash
     cp .env.example .env
     ```
-   
-3. Fill `OPENAI_API_KEY` in `.env` with your OpenAI API key.
+
+4. Fill `OPENAI_API_KEY` in `.env` with your OpenAI API key.
 
    ```text
     OPENAI_API_KEY=sk-...
     ```
-   
+
 ### Usage
 
 Run it!
