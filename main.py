@@ -1,14 +1,9 @@
 import openai
 import os
-import sys
 from os.path import join, dirname
 from dotenv import load_dotenv
 from colors import Colors
-
-
-def clear_line():
-    sys.stdout.write("\033[F")
-    sys.stdout.write("\033[K")
+from utils import clear_line
 
 
 def chat_with_gpt(prompt):
