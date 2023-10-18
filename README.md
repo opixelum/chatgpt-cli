@@ -7,7 +7,8 @@ ChatGPT but in your terminal.
 ### Prerequisites
 
 **Remember that you need credits for OpenAI API in order to use this script.**
-Check [OpenAI platform](https://platform.openai.com)
+Check your
+[OpenAI API billing information](https://platform.openai.com/account/billing).
 
 1. Clone this repo
 
