@@ -14,7 +14,7 @@ Check [OpenAI platform](https://platform.openai.com)
    *Example using `pip`:*
 
    ```bash
-   pip install dotenv
+   pip install dotenv openai
    ```
 
 2. Copy `.env.example` into `.env`:
