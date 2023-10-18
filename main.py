@@ -1,8 +1,8 @@
 import os
 import chatgpt
-from os.path import join, dirname
-from dotenv import load_dotenv
 from colors import Colors
+from dotenv import load_dotenv
+from os.path import join, dirname
 from utils import clear_line
 
 
