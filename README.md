@@ -38,6 +38,12 @@ Check your
    ```bash
     pip3 install python-dotenv openai
     ```
+   
+   *Using `conda`:*
+
+   ```bash
+    conda install -c conda-forge python-dotenv openai
+    ```
 
 3. Copy `.env.example` into `.env`:
 
