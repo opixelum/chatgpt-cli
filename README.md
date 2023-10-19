@@ -24,13 +24,20 @@ Check your
    git clone https://github.com/opixelum/chatgpt-cli.git
    ```
 
-2. Install `dotenv` & `openai` package:
+2. Install `python-dotenv` & `openai` package. Please note that the following 
+   command may vary depending on your Python package manager:
 
-   *Example using `pip`:*
+   *Example using `pip` on **Windows**:*
 
    ```bash
-   pip install dotenv openai
+   pip install python-dotenv openai
    ```
+   
+   *On **Linux** & **MacOS**:*
+
+   ```bash
+    pip3 install python-dotenv openai
+    ```
 
 3. Copy `.env.example` into `.env`:
 
